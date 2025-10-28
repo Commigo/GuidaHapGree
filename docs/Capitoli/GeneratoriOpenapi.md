@@ -43,10 +43,7 @@ docker run --rm -v %CD%:/local ghcr.io/commigo/openapi-generator:latest generate
 
 L'output è così strutturato:
 
-*   **`api`**: Contiene 3 sottocartelle principali. Per ogni tag esistente nel documento OpenAPI (es. `Gruppi`), si crea una cartella che contiene tutte le route appartenenti a quel tag. All'interno di queste cartelle ci sono 3 sottocartelle:
-    *   `controllers`: Sono presenti tutte le implementazioni generate dei controller per ogni rotta, in cui automaticamente si verificano i parametri che vengono passati ai service.
-    *   `service`: È presente un'interfaccia che stabilisce quali sono i parametri che i service si aspettano di ricevere. Questa interfaccia dovrà poi essere implementata dall'effettiva implementazione dei service.
-    *   `routes`: Sono presenti un'interfaccia per l'implementazione degli interceptor e un file `routes` in cui vengono definite le rotte e collegate ai controller e agli interceptor.
+*   **`api`**:  descritto nel capitolo [Struttura Cartelle Api](/Capitoli/StrutturaCartelleApi.md), separati in gruppi logici in base ai tag usati nella specifica.
 
 *   **`model`**: Sono definiti tutti i tipi generati e usati nella specifica OpenAPI.
 

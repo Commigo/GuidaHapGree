@@ -4,9 +4,13 @@
 * [**TypeScript**](/Capitoli/TypeScript.md)
 * [**Fastify**](/Capitoli/Fastify.md)
 * [**Controller-Service-Model**](/Capitoli/ControllerServiceModel.md)
+* [**Struttura del codice api**](/Capitoli/StrutturaCodiceApi.md)
+* [**Struttura cartelle api**](/Capitoli/StrutturaCartelleApi.md)
 * [**Bruno**](/Capitoli/Bruno.md)
 * [**OpenApi**](/Capitoli/OpenApi.md)
 * [**Submodules Git**](/Capitoli/SubmodulesGit.md)
 * [**GeneratoriOpenapi**](/Capitoli/GeneratoriOpenapi.md)
+
+[//]: # (* [**Scrivere la specifica Openapi**]&#40;/Capitoli/AggiornareLaSpecificaOpenapi.md&#41;)
 
 

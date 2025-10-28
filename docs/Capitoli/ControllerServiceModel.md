@@ -5,6 +5,8 @@ Il nostro server implementa le API REST secondo una struttura a tre livelli form
 - I **Controller** si occupano di astrarre il mezzo con cui è stata fatta la richiesta al server.
 - I **Service** implementano la logica di business specifica dell'app.
 - I **Model** si occupano di astrarre la comunicazione con servizi esterni o particolari, come database, notifiche di Firebase, o altre chiamate API.
+- In alcuni casi, prima di raggiungere il controller, la richiesta viene intercettata da un *interceptor*. Questo componente esegue controlli trasversali, ovvero validazioni generiche e riutilizzabili che non dipendono dalla singola operazione.
+
 
 ## Controller
 
@@ -31,6 +33,10 @@ Vediamo un esempio con l'API per creare un invito a un gruppo: `/group/:id/invit
 Questa API ha due parametri:
 - Uno di path: `:id`
 - Uno di query: `idUtente`
+
+### Interceptor
+la richiesta viene intercettata dall'interceptor authMiddleware che verifica che il token di autorizzazione sia presente e valido.
+
 
 ### Controller
 
