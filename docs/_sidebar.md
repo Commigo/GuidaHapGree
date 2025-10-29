@@ -10,7 +10,8 @@
 * [**OpenApi**](/Capitoli/OpenApi.md)
 * [**Submodules Git**](/Capitoli/SubmodulesGit.md)
 * [**GeneratoriOpenapi**](/Capitoli/GeneratoriOpenapi.md)
+* [**Scrivere la specifica Openapi**](/Capitoli/AggiornareLaSpecificaOpenapi.md)
+* [**Generare la specifica Openapi**](/Capitoli/GenerareLaSpecificaOpenapi.md)
 
-[//]: # (* [**Scrivere la specifica Openapi**]&#40;/Capitoli/AggiornareLaSpecificaOpenapi.md&#41;)
 
 

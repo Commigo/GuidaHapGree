@@ -4,7 +4,10 @@ Come menzionato nel capitolo [OpenAPI](/Capitoli/OpenApi.md), a partire dalla sp
 
 Entrambi sono generati a partire da un tool che è un fork del generatore ufficiale di OpenAPI. La repository del fork è [questa](https://github.com/Commigo/BrunoOpenApiGenerator).
 
-Il progetto è scritto in Java. Per poter rendere semplice l'utilizzo del tool senza dover installare Java o altre dipendenze, è stato wrappato in un container Docker. In questo modo è possibile utilizzarlo scaricando unicamente la sua immagine con Docker. L'immagine del tool è caricata sul registry di Commigo al [seguente link](https://github.com/orgs/Commigo/packages/container/package/openapi-generator) e il path dell'immagine è `ghcr.io/commigo/openapi-generator:latest`.
+Il progetto è scritto in Java. Per poter rendere semplice l'utilizzo del tool senza dover installare Java o altre dipendenze, è stato wrappato in un container Docker. In questo modo è possibile utilizzarlo scaricando unicamente la sua immagine con Docker. 
+L'immagine del tool è caricata sul registry di Commigo al [seguente link](https://github.com/orgs/Commigo/packages/container/package/openapi-generator) e il path dell'immagine è `ghcr.io/commigo/openapi-generator:latest`.
+
+> **Nota:** L'immagine Docker si trova nei package privati dell'organizzazione Commigo. Per poterla scaricare, è necessario prima autenticarsi al container registry di GitHub tramite Docker. Per maggiori dettagli sulla procedura di autenticazione, si può consultare la seguente guida: [Authenticating with a personal access token (classic)](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic).
 
 ## Generazione Progetto Bruno
 
@@ -23,7 +26,7 @@ Spiegazione del comando:
 *   `-i /local/ApiDocumentation/OpenApi/OpenApi/HapGreeOpenApi.json`: specifica il file di input.
 *   `-o /local/ApiDocumentation/GeneratedBruno`: indica la cartella di output.
 
-Per rendere questo processo più facile, è stato creato lo script `Scripts\RunBrunoCodeGen.bat` che esegue il tool automaticamente.
+Per rendere questo processo più facile, è stato creato lo script `Scripts\RunBrunoCodeGen.bat` che esegue il tool automaticamente, per runnare lo script assicurasi di essere nella directory root del progetto.
 
 L'output sarà una cartella composta da tutti i file `.bru` che descrivono le richieste. In generale, i file generati non andrebbero modificati o committati, poiché dipendono unicamente dalle modifiche fatte alla specifica OpenAPI e cambiano solo se la specifica cambia.
 
