@@ -16,6 +16,8 @@
 * [**Definizione dello schema del database**](/Capitoli/DefinizioneSchemaDB.md)
 * [**Migrazioni**](/Capitoli/Migrazioni.md)
 * [**Interrogazioni del database**](/Capitoli/InterrogazioniDelDatabase.md)
+* [**Models**](/Capitoli/Models.md)
+
 
 
 
