@@ -12,6 +12,12 @@
 * [**GeneratoriOpenapi**](/Capitoli/GeneratoriOpenapi.md)
 * [**Scrivere la specifica Openapi**](/Capitoli/AggiornareLaSpecificaOpenapi.md)
 * [**Generare la specifica Openapi**](/Capitoli/GenerareLaSpecificaOpenapi.md)
+* [**Introduzione al Database**](/Capitoli/IntroduzioneDatabase.md)
+* [**Definizione dello schema del database**](/Capitoli/DefinizioneSchemaDB.md)
+* [**Migrazioni**](/Capitoli/Migrazioni.md)
+* [**Interrogazioni del database**](/Capitoli/InterrogazioniDelDatabase.md)
+
+
 
 
 

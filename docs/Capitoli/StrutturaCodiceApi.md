@@ -335,3 +335,63 @@ export const FoodInterceptors  = {
 ```
 
 > **Nota**: Come si può osservare, in questo caso viene utilizzato lo stesso interceptor `AuthMiddleware([1, 2, 3])` per tutte le richieste.
+
+## Gestione degli Errori con `ResultAndError<T>`
+
+Come si può notare nelle firme dei metodi dei `Service`, viene utilizzato il tipo `ResultAndError<T>`. Questo è un tipo generico personalizzato introdotto per migliorare la gestione degli errori nel progetto.
+
+### Motivazione
+
+In precedenza, la gestione degli errori si basava sull'uso di eccezioni (`try-catch`), un approccio che può rendere il flusso di controllo meno trasparente. Il tipo `ResultAndError<T>` introduce un pattern di ritorno esplicito, dove ogni funzione comunica chiaramente la possibilità di un fallimento.
+
+### Struttura del Tipo
+
+`ResultAndError<T>` è definito come una **tupla** che può rappresentare due stati:
+
+-   **Successo**: Una tupla della forma `[T, null]`, dove il primo elemento è il valore di ritorno atteso (di tipo `T`) e il secondo è `null`.
+-   **Errore**: Una tupla della forma `[null, string]`, dove il primo elemento è `null` e il secondo è una stringa che descrive l'errore.
+
+### Utilizzo Pratico
+
+Questo approccio semplifica la gestione del risultato di una funzione.
+
+#### "Spacchettare" il Risultato
+
+È possibile destrutturare la tupla di ritorno per accedere sia al risultato che all'eventuale errore, rendendo il codice più leggibile:
+
+```typescript
+const [result, error] = await FoodService.someMethod(...);
+```
+
+#### Verificare la Presenza di Errori
+
+Il controllo dell'errore diventa semplice e lineare, senza la necessità di un blocco `try-catch` per la logica di business.
+
+```typescript
+if (error !== null) {
+    // Gestisci l'errore (es. log, invio di una risposta HTTP di errore)
+    console.error(error);
+    replay.status(500).send({ errors: [error] });
+    return;
+}
+// Se non ci sono errori, 'result' contiene il valore atteso e può essere usato in sicurezza.
+replay.status(200).send(result);
+```
+
+#### Esempi di Ritorno da un Service
+
+##### Successo
+
+Per restituire un valore di successo da una funzione che ritorna `ResultAndError<number>`:
+
+```typescript
+return [5, null];
+```
+
+##### Errore
+
+Per restituire un errore:
+
+```typescript
+return [null, "Si è verificato un errore perché..."];
+```
