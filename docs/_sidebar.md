@@ -18,6 +18,11 @@
 * [**Interrogazioni del database**](/Capitoli/InterrogazioniDelDatabase.md)
 * [**Models**](/Capitoli/Models.md)
 * [**Variabili di ambiente**](/Capitoli/VariabiliDiEnv.md)
+* [**Docker**](/Capitoli/Docker.md)
+* [**Nostro Dockerfile**](/Capitoli/NostroDockerfile.md)
+* [**Buildare in Docker**](/Capitoli/BuildareInDocker.md)
+
+
 
 
 
