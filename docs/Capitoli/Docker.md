@@ -2,6 +2,10 @@
 
 Per evitare problemi legati a differenze negli ambienti di esecuzione (come versioni di Node.js diverse, file mancanti non tracciati, ecc.), utilizziamo [Docker](https://www.docker.com/). Questo strumento permette di costruire un ambiente di esecuzione standardizzato, chiamato **immagine**, per il nostro server, che può essere eseguito su qualsiasi macchina dotata di Docker.
 
+Nei capitoli successivi ci sono dei riassunti delle funzionalità di docker e come usarle, però è probabile che non bastino per capire tutto, 
+l'obiettivo della guida è di capire come queste cose sono applicate al nostro server e non di spiegare
+il funzionamento di docker in maniera esaustiva, quindi se qualcosa sul funzionamento di docker stesso non è chiaro consulare la documentazione ufficiale [Docker](https://www.docker.com/)
+
 ## Immagini e Container
 
 Il concetto fondamentale di Docker si basa su due elementi principali:
